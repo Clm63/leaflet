@@ -128,7 +128,7 @@ $(window).on('load', function() {
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
-          (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') + 
+          (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') + '<b>This text is bold</b>' + 
           point['Description']+ '</b><br>' + point['Nombre'] + '</b><br>' + point['Link']);
 
         if (layers !== undefined && layers.length !== 1) {
