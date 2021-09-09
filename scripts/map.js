@@ -94,6 +94,41 @@ $(window).on('load', function() {
     }
     return layers;
   }
+  
+  
+  
+   function determineLayers(points) {
+    var years = [];
+    var layers = {};
+
+    for (var i in points) {
+      var year = points[i].Year;
+      if (year && groups.indexOf(year) === -1) {
+        // Add years to Years
+        years.push(year);
+
+        // Add color to the crosswalk
+        group2color[ year ] = points[i]['Marker Icon'].indexOf('.') > 0
+          ? points[i]['Marker Icon']
+          : points[i]['Marker Color'];
+      }
+    }
+
+    // if none of the points have named layers, return no layers
+    if (groups.length === 0) {
+      layers = undefined;
+    } else {
+      for (var i in years) {
+        var name = years[i];
+        layers[name] = L.layerGroup();
+        layers[name].addTo(map);
+      }
+    }
+    return layers;
+  }
+  
+  
+  
 
   /**
    * Assigns points to appropriate layers and clusters them if needed
