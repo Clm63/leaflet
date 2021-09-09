@@ -130,8 +130,7 @@ $(window).on('load', function() {
           .bindPopup("<strong>" + point['Name'] + '</strong><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') + '<b>Description : </b>' + 
           point['Description']+ '</b><br>' + '<b>Location : </b>' + point['Location'] + '</b><br>' + 
-                     '<b>Budget : </b>' + point['Budget'] + '</b><br>' + '<b>Année : </b>' + point['Year'] + '</b><br>' + '<b>Link : </b>' 
-                     + <a href="point['Link']">point['Link']</a> 
+                     '<b>Budget : </b>' + point['Budget'] + '</b><br>' + '<b>Année : </b>' + point['Year'] + '</b><br>' + '<b>Link : </b>' + point['Link']
                     + '</b><br>' + '<b>Ref : </b>' + point['Ref']);
 
         if (layers !== undefined && layers.length !== 1) {
