@@ -106,11 +106,6 @@ $(window).on('load', function() {
       if (year && groups.indexOf(year) === -1) {
         // Add years to Years
         years.push(year);
-
-        // Add color to the crosswalk
-        group2color[ year ] = points[i]['Marker Icon'].indexOf('.') > 0
-          ? points[i]['Marker Icon']
-          : points[i]['Marker Color'];
       }
     }
 
