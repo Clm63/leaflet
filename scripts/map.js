@@ -66,7 +66,7 @@ $(window).on('load', function() {
    * column in the spreadsheet.
    */
   function determineLayers(points) {
-    var groups = [];
+    var groups = []
     var layers = {};
 
     for (var i in points) {
