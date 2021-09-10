@@ -33,6 +33,12 @@ var constants = {
 	_pointsLegendTitle: 'Point Legend Title',
 	_pointsLegendPos: 'Point Legend Position',
   _pointsLegendIcon: 'Point Legend Icon',
+	
+	// Clément
+	_pointsLegendTitle2: 'Point Legend Title 2',
+	_pointsLegendPos2: 'Point Legend Position 2',
+  _pointsLegendIcon2: 'Point Legend Icon 2',
+	
   // Table Map
   _displayTable: 'Display Table',
   _tableHeight: 'Table Height',
