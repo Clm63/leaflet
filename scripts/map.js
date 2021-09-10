@@ -70,7 +70,7 @@ $(window).on('load', function() {
     var layers = {};
 
     for (var i in points) {
-      var group = points[i].Group;
+      var group = points[i].Year;
       if (group && groups.indexOf(group) === -1) {
         // Add group to groups
         groups.push(group);
@@ -186,6 +186,8 @@ $(window).on('load', function() {
       $('#points-legend h6').prepend('<span class="legend-icon"><i class="fas '
         + getSetting('_pointsLegendIcon') + '"></i></span>');
     }
+    
+    ////////////////////////////////////////////////////////////////////////////////:
 
     var displayTable = getSetting('_displayTable') == 'on' ? true : false;
 
