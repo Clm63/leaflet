@@ -96,34 +96,6 @@ $(window).on('load', function() {
   }
   
   
-  
-   function determineLayers(points) {
-    var years = [];
-    var layers = {};
-
-    for (var i in points) {
-      var year = points[i].Year;
-      if (year && groups.indexOf(year) === -1) {
-        // Add years to Years
-        years.push(year);
-      }
-    }
-
-    // if none of the points have named layers, return no layers
-    if (groups.length === 0) {
-      layers = undefined;
-    } else {
-      for (var i in years) {
-        var name = years[i];
-        layers[name] = L.layerGroup();
-        layers[name].addTo(map);
-      }
-    }
-    return layers;
-  }
-  
-  
-  
 
   /**
    * Assigns points to appropriate layers and clusters them if needed
